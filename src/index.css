@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Ограничим стили только контейнером с id="skills-slider" */
+#skills-slider::-webkit-scrollbar {
+  height: 8px;
+}
+#skills-slider::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+#skills-slider::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+/* Для Firefox */
+#skills-slider {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) rgba(0,0,0,0.05);
+}
+
+
+
+/* только для контейнера с классом .scrollbar-custom */
+.scrollbar-custom {
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #6366F1 #E5E7EB;   /* thumb track */
+}
+
+/* WebKit-браузеры */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 8px;                        /* толщина */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #E5E7EB;                /* цвет дорожки */
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to right,
+    #6366F1,  /* indigo-500 */
+    #3B82F6   /* blue-500 */
+  );
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to right,
+    #4F46E5,  /* indigo-600 */
+    #2563EB   /* blue-600 */
+  );
+}
